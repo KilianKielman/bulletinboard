@@ -1,0 +1,41 @@
+doctype html
+html
+	head
+		title Bulletin Board.
+	body
+		a(href='/') Home
+		br
+		a(href='/postedmessages') Bulletin Board
+		h1 Welcome. Here is my Bulletin Board.
+		ul
+			each message in allMessages
+				div(class='style3')
+					h4 Title
+					div(class='style1' style='font-size:14pt; font-weight: bold;')= message.title
+					div(class='style2')= message.body
+					style.
+						.style1, select {
+						width: 100%;
+						padding: 12px 20px;
+						margin: 8px 0;
+						display: inline-block;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+						background-color: #ffffff;
+						box-sizing: border-box;
+						}
+						.style2, select {
+						width: 100%;
+						padding: 36px 20px;
+						margin: 8px 0;
+						display: inline-block;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+						background-color: #ffffff;
+						box-sizing: border-box;
+						}
+						.style3, select {
+						border-radius: 5px;
+						background-color: #f2f2f2;
+						padding: 40px;
+						}
